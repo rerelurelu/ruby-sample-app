@@ -1,15 +1,10 @@
 class HelloController < ApplicationController
-    protect_from_forgery
+    layout = 'hello'
 
     def index
-        if request.post?
-            @title = 'Result'
-            @msg = 'you typed: ' + params['input1'] + '.'
-            @value = params['input1']
-        else
-            @title = 'Index'
-            @msg = 'type text.'
-            @value = ''
-        end
+        @header = 'Layout sample'
+        @footer = 'copyright zoniha'
+        @title = 'New'
+        @msg = 'This is a sample page.'
     end
 end
