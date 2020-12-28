@@ -1,5 +1,5 @@
 class HelloController < ApplicationController
-    layout = 'hello'
+    layout 'hello'
 
     def index
         @header = 'Layout sample'
