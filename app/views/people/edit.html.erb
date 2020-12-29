@@ -1,0 +1,17 @@
+<h1 class="display-4 text-primary">people#add</h1>
+<p><%= @msg %></p>
+<%= form_with model: @person, url:{controller: 'people', action: 'update', id: @person.id} do |form| %>
+  <div class="from-group">
+    <label for="form-group">Name</label>
+    <%= form.text_field :name, class:"form-control" %>
+  </div>
+  <div class="from-group">
+    <label for="form-group">Age</label>
+    <%= form.text_field :age, class:"form-control" %>
+  </div>
+  <div class="from-group">
+    <label for="form-group">Mail</label>
+    <%= form.text_field :mail, class:"form-control" %>
+  </div>
+  <%= form.submit class:"btn btn-primary" %>
+<% end %>
