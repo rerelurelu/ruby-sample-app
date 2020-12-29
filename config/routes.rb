@@ -7,5 +7,4 @@ Rails.application.routes.draw do
   get 'hello/index'
   post 'hello', to: 'hello#index'
   post 'hello/index'
-  # post 'None'
 end
