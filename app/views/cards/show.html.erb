@@ -1,0 +1,29 @@
+<h1 class="display-4 text-primary">Data Detail</h1>
+<p>About <%= @card.title %></p>
+<table class="table">
+  <tr>
+    <th class="detail-id">ID</th>
+    <td><%= @card.id %></td>
+  </tr>
+  <tr>
+    <th class="detail-title">Title</th>
+    <td><%= @card.title %></td>
+  </tr>
+  <tr>
+    <th class="detail-author">Author</th>
+    <td><%= @card.author %></td>
+  </tr>
+  <tr>
+    <th class="detail-price">Price</th>
+    <td><%= @card.price %></td>
+  </tr>
+  <tr>
+    <th class="detail-publisher">Publisher</th>
+    <td><%= @card.publisher %></td>
+  </tr>
+  <tr>
+    <th class="detail-memo">Comment</th>
+    <td><%= @card.memo %></td>
+  </tr>
+</table>
+<p><a href="/cards">&lt;&lt;Back Home</a></p>

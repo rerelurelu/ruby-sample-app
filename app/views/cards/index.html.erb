@@ -1,0 +1,25 @@
+<h1 class="display-4 text-primary">Cards#index</h1>
+<p>Registered data list</p>
+<table class="table">
+  <tr>
+    <th>ID</th><th>Title</th><th>Author</th><th colspan="2"></th>
+  </tr>
+  <% @cards.each do |obj| %>
+  <tr>
+    <td class="card-id"><%= obj.id %></td>
+    <td class="card-title"><a href="/cards/<%= obj.id %>"><%= obj.title %></a></td>
+    <td class="card-author"><%= obj.author %></td>
+    <td class="card-edit"><a href="/cards/edit/<%= obj.id %>">Edit</a></td>
+    <td class="card-delete"><a href="javascript:delData(<%= obj.id %>)">Delete</a></td>
+  </tr>
+  <% end %>
+</table>
+<p><a href="/cards/add">Create&gt;&gt;</a></p>
+
+<script type="text/javascript" charset="utf-8">
+  function delData(id) {
+      if (confirm("Are you sirius?")) {
+          document.location = "/cards/delete/" + id;
+      }
+  }
+</script>
