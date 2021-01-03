@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
+  # scaffold
+  resources :answers
+  resources :questions
   resources :mycontacts
+
   # Message
   get 'messages/index'
   get 'messages', to: 'messages#index'
