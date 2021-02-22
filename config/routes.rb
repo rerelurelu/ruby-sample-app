@@ -3,9 +3,10 @@ Rails.application.routes.draw do
   post 'msgboard', to: 'msgboard#index'
   get 'msgboard/index'
   post 'msgboard/index'
+
   get 'hello', to: 'hello#index'
   get 'hello/index'
+  
   post 'hello', to: 'hello#index'
   post 'hello/index'
-  # add comment
 end
